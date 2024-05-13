@@ -1,27 +1,29 @@
-# Manipulation de Base de Données Cassandra avec Spring Boot
+# Gestion de Base de Données Cassandra avec Spring Boot
 
-## Introduction
-Ce dépôt GitHub contient les ressources nécessaires pour le travail pratique sur la manipulation d'une base de données Cassandra à l'aide de Spring Boot. L'objectif est de gérer une table de produits dans un keystore, illustrant l'intégration entre une application Spring Boot et Cassandra, une base de données NoSQL.
+## Aperçu
+Ce dépôt GitHub renferme les ressources nécessaires pour la manipulation pratique d'une base de données Cassandra à l'aide de Spring Boot. L'objectif principal est d'illustrer l'intégration harmonieuse entre une application Spring Boot et Cassandra, une base de données NoSQL, à travers la gestion d'une table de produits dans un keystore.
 
-### Technologie
+### Technologies Utilisées
 
 * Spring Boot
 * Cassandra
 * Spring Data Cassandra
 * Swagger UI
-## Fonctionnalités
 
-L'application Spring Boot développée offre les fonctionnalités suivantes :
-- **Ajout de produits** : Permet d'ajouter un nouveau produit dans la base de données.
-- **Consultation de produits** : Permet de récupérer les détails d'un produit par son identifiant UUID.
-- **Mise à jour de produits** : Permet de mettre à jour les informations d'un produit existant.
-- **Suppression de produits** : Permet de supprimer un produit de la base de données.
-- **Recherche de produits** : Permet de rechercher des produits en fonction d'un mot-clé dans leur nom.
+## Fonctionnalités Principales
+
+Cette application Spring Boot offre les fonctionnalités suivantes :
+
+- **Ajout de Produits** : Permet l'ajout d'un nouveau produit dans la base de données.
+- **Consultation de Produits** : Récupération des détails d'un produit par son identifiant UUID.
+- **Mise à Jour de Produits** : Permet de mettre à jour les informations d'un produit existant.
+- **Suppression de Produits** : Permet de supprimer un produit de la base de données.
+- **Recherche de Produits** : Permet de rechercher des produits en fonction d'un mot-clé dans leur nom.
 
 ## Utilisation
 
-- **Démarrage de Cassandra avec Docker :** Assurez-vous que Docker est installé et fonctionnel.
-- **Accès à l'API via Swagger UI :** Une fois l'application démarrée, accédez à Swagger UI pour interagir avec l'API :
+- **Démarrage de Cassandra avec Docker :** Veuillez vous assurer que Docker est installé et opérationnel.
+- **Accès à l'API via Swagger UI :** Après le démarrage de l'application, accédez à Swagger UI pour interagir avec l'API :
 
 ```bash
 http://localhost:8080/swagger-ui.html
@@ -29,14 +31,14 @@ http://localhost:8080/swagger-ui.html
 
 ## Architecture du Projet
 
-- **Entité Product**: Modèle de données pour les produits.
+- **Entité Produit**: Modèle de données pour les produits.
 - **ProductRepository**: Interface pour les opérations CRUD sur Cassandra.
-- **ProductServices**: Service layer offrant des méthodes pour gérer les produits.
+- **ProductServices**: Couche de service fournissant des méthodes pour la gestion des produits.
 - **ProductRestAPI**: Contrôleur REST pour interagir avec l'application via HTTP.
 
 ## Configuration Technique
 
-### Cassandra dans Docker
+### Utilisation de Cassandra dans Docker
 ```yaml
 version: '3'
 services:
@@ -52,17 +54,17 @@ services:
 
 ## Dépendances Maven
 
-Inclure les dépendances suivantes dans votre fichier `pom.xml` pour tirer parti des fonctionnalités de Spring Boot, Cassandra et Swagger UI:
+Incluez les dépendances suivantes dans votre fichier `pom.xml` pour bénéficier des fonctionnalités de Spring Boot, Cassandra et Swagger UI:
 
 ```xml
-<!-- Swagger UI for API Documentation -->
+<!-- Swagger UI pour la Documentation API -->
 <dependency>
     <groupId>org.springdoc</groupId>
     <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
     <version>2.1.0</version>
 </dependency>
 
-<!-- Cassandra Data and Web Support -->
+<!-- Prise en charge des Données Cassandra et Web -->
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-data-cassandra</artifactId>
@@ -72,7 +74,7 @@ Inclure les dépendances suivantes dans votre fichier `pom.xml` pour tirer parti
     <artifactId>spring-boot-starter-web</artifactId>
 </dependency>
 
-<!-- Docker Compose Integration -->
+<!-- Intégration Docker Compose -->
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-docker-compose</artifactId>
@@ -80,8 +82,5 @@ Inclure les dépendances suivantes dans votre fichier `pom.xml` pour tirer parti
     <optional>true</optional>
 </dependency>
 ```
-
-> **Remarque :**
-> Ce projet est destiné à des fins de démonstration uniquement.\
-> N'oubliez pas de configurer correctement la connexion à Cassandra avant de démarrer l'application.\
->**Contribuer** : N'hésitez pas à contribuer à ce projet en créant des pull requests!
+# Par : Nouhayla MOUAKKAL | II-BDCC2 
+## TP6 - Module : Big Data : Architectures de stockages
